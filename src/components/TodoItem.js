@@ -55,7 +55,7 @@ const TodoItem = ({task, status}) => {
             <button className='remove-btn' onClick={handleRemoveTask}>
                 Delete
             </button>
-            <button style={{display: status ? 'none' : 'block'}} onClick={() => setIsEdit(true)}>
+            <button style={{display: status || isEdit ? 'none' : 'block'}} onClick={() => setIsEdit(true)}>
                 Edit
             </button>
         </li>
