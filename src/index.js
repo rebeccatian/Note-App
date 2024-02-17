@@ -1,15 +1,15 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import App from './App';
+import store from './redux/store';
+import { Provider } from 'react-redux';
+import './index.css';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
 
-const HelloWorld = () => {
-    return (
-        <h1>
-            Hello World
-        </h1>
-    );
-}
-
-root.render(<HelloWorld />);
+root.render(
+    <Provider store={store}>
+        <App />
+    </Provider>
+);
